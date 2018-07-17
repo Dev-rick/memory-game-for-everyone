@@ -240,9 +240,11 @@ function removeNoMatchShowOpenClasses (firstCard, secondCard) {
 // remove the click events
 function stopClickEvent () {
   deck.removeEventListener('click', showTheCard);
+  restartButton.removeEventListener('click', resetTheGame);
 }
 
 // add removed click events
 function addRemovedClickEvent () {
   deck.addEventListener('click', showTheCard);
+  restartButton.addEventListener('click', resetTheGame);
 }
