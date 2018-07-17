@@ -36,63 +36,32 @@
 
 @media screen and (min-width: 640px){
   h1 {
-    font-size: 50px;
+    font-size: 40px;
   }
   .score-panel {
       margin-bottom: 10px;
       font-size: 40px;
   }
   .deck {
-      width: 600px;
-      min-height: 600px ;
+      width: 500px;
+      min-height: 500px ;
       padding: 17px;
   }
   .flip-container, .front, .back {
-      min-height: calc(500px/4);
-      width: calc(500px/4);
+      min-height: calc(400px/4);
+      width: calc(400px/4);
   }
   .open {
-      font-size: 70px;
+      font-size: 60px;
   }
   .match {
-      font-size: 70px;
+      font-size: 60px;
   }
 
   .noMatch {
-      font-size: 70px;
+      font-size: 60px;
   }
   .modal-content {
-      font-size: 30px;
-  }
-}
-
-@media screen and (min-width: 800px){
-  h1 {
-    font-size: 55px;
-  }
-  .score-panel {
-      margin-bottom: 5px;
-      font-size: 45px;
-  }
-  .deck {
-      width: 700px;
-      min-height: 700px ;
-      padding: 20px;
-  }
-  .flip-container, .front, .back {
-      min-height: calc(600px/4);
-      width: calc(600px/4);
-  }
-  .open {
-      font-size: 90px;
-  }
-  .match {
-      font-size: 90px;
-  }
-  .noMatch {
-      font-size: 90px;
-  }
-  .modal-content {
-      font-size: 40px;
+      font-size: 60px;
   }
 }
