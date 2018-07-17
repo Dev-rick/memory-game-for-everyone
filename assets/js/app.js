@@ -52,6 +52,8 @@ function resetTheGame () {
     }
     // remove flip event so they flip back
     cardsNodeList.item(i).parentElement.parentElement.parentElement.classList.remove('flip');
+    // adding pointer cursor if it missed
+    cardsNodeList.item(i).parentElement.parentElement.style.cursor = 'pointer';
   };
   // shuffle the deck
   cardsArray = shuffle(cardsArray);
