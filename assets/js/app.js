@@ -173,7 +173,7 @@ function resetBothCards (firstCard, secondCard) {
     secondCard.parentElement.parentElement.classList.remove('flip');
     setTimeout(removeNoMatchShowOpenClasses, 300, firstCard, secondCard);
   }
-  deck.addEventListener('click', showTheCard);
+  addRemovedClickEvent();
   firstCard.parentElement.style.cursor = 'pointer';
   secondCard.parentElement.style.cursor = 'pointer';
 }
