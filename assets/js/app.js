@@ -15,9 +15,9 @@ const deck = document.querySelector('div.deck');
 const listOfStarsInModal = document.querySelectorAll('i.modal-star');
 const playmodalFooter = document.querySelector('.playmodal-footer');
 let listOfStars = document.querySelectorAll('i.score-star');
-let count = 0;
-let matchedCards = 0;
-let starsLost = 0;
+let count;
+let matchedCards;
+let starsLost;
 let clickedCard;
 let firstCard;
 let secondCard;
@@ -33,6 +33,7 @@ function resetTheGame () {
   stopClickEvent();
   matchedCards = 0;
   count = 0;
+  starsLost = 0;
   counter(count);
   // reset the starsLost by adding the fa class which overrides the far class
   let listOfStarsWithoutFaClass = document.querySelectorAll('i.fa-star:not(.fa)');
