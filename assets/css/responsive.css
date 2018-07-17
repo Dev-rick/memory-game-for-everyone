@@ -29,14 +29,11 @@
   .modal-content {
       font-size: 20px;
   }
-  #playButton{
-      font-size: 40px;
-  }
 }
 
 @media screen and (min-width: 640px){
   h1 {
-    font-size: 40px;
+    font-size: 50px;
   }
   .score-panel {
       margin-bottom: 10px;
@@ -62,6 +59,6 @@
       font-size: 60px;
   }
   .modal-content {
-      font-size: 60px;
+      font-size: 30px;
   }
 }
