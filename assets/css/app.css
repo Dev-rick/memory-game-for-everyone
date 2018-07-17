@@ -1,0 +1,297 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body * { -webkit-tap-highlight-color: rgba(0,0,0,0); }
+
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #ffffff url('../img/geometry2.png'); /* Background pattern from Subtle Patterns */
+    font-family: 'Coda', cursive;
+}
+
+h1 {
+  margin-bottom: 50px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 30px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+
+/*
+ * Styles for the deck of cards
+ */
+
+.deck {
+    width: 300px;
+    min-height: 300px;
+    background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
+    padding: 13px;
+    border-radius: 10px;
+    box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 3em;
+    list-style-type: none;
+}
+
+/* Flipping Cards */
+
+/* entire container, keeps perspective */
+.flip-container {
+  -webkit-perspective: 1000px;
+  -moz-perspective: 1000px;
+  -o-perspective: 1000px;
+	perspective: 1000px;
+  cursor: pointer;
+}
+	/* flip the pane when fliped */
+.flip-container.flip .flipper {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+}
+
+.flip-container, .front, .back {
+  min-height: calc(230px/4);
+  width: calc(230px/4);
+}
+
+/* flip speed goes here */
+.flipper {
+  -webkit-transform: perspective(1000px);
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: 0.6s;
+  -moz-transform: perspective(1000px);
+  -moz-transform-style: preserve-3d;
+	transition: 0.6s;
+	transform-style: preserve-3d;
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+  color: #ffffff;
+  border-radius: 8px;
+  line-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+  position: absolute;
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+}
+
+/* front pane, placed above back */
+.front {
+	/* for firefox 31 */
+  font-size: 0px;
+  background: #2e3d49;
+	transform: rotateY(0deg);
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  -o-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+  font-size: 0px;
+  background: #2e3d49;
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.open {
+  background: #02b3e4;
+  font-size: 40px;
+}
+
+.match {
+    background: #2AC004;
+    font-size: 40px;
+}
+
+.noMatch {
+    background: #FF464C;
+    font-size: 40px;
+}
+
+/*
+ * Styles for the score-panel-play (first modal to appear) and score-panel at the end
+ */
+
+
+.moves {
+  margin-left: 5px;
+}
+
+.restart {
+  margin-left: 60px;
+  padding-bottom: 0;
+}
+
+.score-panel {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.score-panel .stars, .score-panel-modal .stars {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    margin: 0 5px 0 0;
+}
+
+.score-panel .stars li, .score-panel-modal .stars li {
+    list-style: none;
+    display: inline-block;
+}
+
+.score-panel .restart, .score-panel-modal .restart {
+    float: right;
+    cursor: pointer;
+}
+
+
+/* Style for the playmodal and the endmodal  */
+
+.playmodal {
+    display: flex; /* Hidden by default */
+    flex-wrap: wrap;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.endmodal {
+    display: none; /* Hidden by default */
+    flex-wrap: wrap;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    border: 10px solid black;
+    font-size: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Modal Header */
+.modal-header {
+    display: flex;
+    justify-content: center; /* makes it in the horizontal center */
+    background-color: #2AC004;
+    color: white;
+}
+
+/* Modal Body */
+.modal-body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  padding: 16px 16px;
+  min-height: 100%;
+}
+
+.modal-body .stars {
+  font-size: 50px;
+}
+
+/* Modal Footer */
+.endmodal-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 16px 16px;
+    background-color: #2AC004;
+    color: white;
+    cursor: pointer;
+}
+
+.playmodal-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 16px 16px;
+    background-color: #2AC004;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+/* Add Animation */
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+
+/* Icon Spin */
+.hvr-icon-spin {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.hvr-icon-spin .hvr-icon {
+  -webkit-transition-duration: 1s;
+  transition-duration: 1s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+}
+.hvr-icon-spin:hover .hvr-icon, .hvr-icon-spin:focus .hvr-icon, .hvr-icon-spin:active .hvr-icon {
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+}

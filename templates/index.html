@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Matching Game</title>
+    <meta name="description" content="">
+    <link rel="stylesheet prefetch" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+    <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>Matching Game</h1>
+    </header>
+
+    <section class="score-panel">
+    	<ul class="stars">
+    		<li><i class="score-star far fa fa-star"></i></li>
+    		<li><i class="score-star far fa fa-star"></i></li>
+    		<li><i class="score-star far fa fa-star"></i></li>
+    	  <li><span class="moves"> 0</span> Moves</li>
+        <li class=" hvr-icon-spin"><i class="restart fas fa-redo-alt hvr-icon"></i></li>
+      </ul>
+    </section>
+    <div class="deck">
+      <div class="flip-container" >
+      	<div class="flipper">
+          <div class="front">
+
+      		</div>
+      		<div class="back ">
+      			<i class="far fa-gem"></i>
+      		</div>
+      	</div>
+      </div>
+      <div class="flip-container" >
+      	<div class="flipper">
+          <div class="front">
+
+      		</div>
+      		<div class="back ">
+      			<i class="far fa-paper-plane"></i>
+      		</div>
+      	</div>
+      </div>
+      <div class="flip-container" >
+      	<div class="flipper">
+          <div class="front">
+
+      		</div>
+      		<div class="back ">
+      			<i class="fa fa-anchor"></i>
+      		</div>
+      	</div>
+      </div>
+      <div class="flip-container" >
+      	<div class="flipper">
+          <div class="front">
+
+      		</div>
+      		<div class="back ">
+      			<i class="fas fa-smile"></i>
+      		</div>
+      	</div>
+      </div>
+      <div class="flip-container" >
+      	<div class="flipper">
+          <div class="front">
+
+      		</div>
+      		<div class="back ">
+      			<i class="fa fa-cube"></i>
+      		</div>
+      	</div>
+      </div>
+      <div class="flip-container" >
+      	<div class="flipper">
+          <div class="front">
+
+      		</div>
+      		<div class="back ">
+      			<i class="fa fa-anchor"></i>
+      		</div>
+      	</div>
+      </div>
+      <div class="flip-container" >
+      	<div class="flipper">
+          <div class="front">
+
+      		</div>
+      		<div class="back ">
+      			<i class="fa fa-leaf"></i>
+      		</div>
+      	</div>
+      </div>
+      <div class="flip-container" >
+      	<div class="flipper">
+          <div class="front">
+
+      		</div>
+      		<div class="back ">
+      			<i class="fa fa-bicycle"></i>
+      		</div>
+      	</div>
+      </div>
+      <div class="flip-container" >
+      	<div class="flipper">
+          <div class="front">
+
+      		</div>
+      		<div class="back ">
+      			<i class="far fa-gem"></i>
+      		</div>
+      	</div>
+      </div>
+      <div class="flip-container" >
+      	<div class="flipper">
+          <div class="front">
+
+      		</div>
+      		<div class="back ">
+      			<i class="fa fa-bomb"></i>
+      		</div>
+      	</div>
+      </div>
+      <div class="flip-container" >
+      	<div class="flipper">
+          <div class="front">
+
+      		</div>
+      		<div class="back ">
+      			<i class="fa fa-leaf"></i>
+      		</div>
+      	</div>
+      </div>
+      <div class="flip-container" >
+      	<div class="flipper">
+          <div class="front">
+
+      		</div>
+      		<div class="back ">
+      			<i class="fa fa-bomb"></i>
+      		</div>
+      	</div>
+      </div>
+      <div class="flip-container" >
+      	<div class="flipper">
+          <div class="front">
+
+      		</div>
+      		<div class="back ">
+      			<i class="fas fa-smile"></i>
+      		</div>
+      	</div>
+      </div>
+      <div class="flip-container" >
+      	<div class="flipper">
+          <div class="front">
+
+      		</div>
+      		<div class="back ">
+      			<i class="fa fa-bicycle"></i>
+      		</div>
+      	</div>
+      </div>
+      <div class="flip-container" >
+      	<div class="flipper">
+          <div class="front">
+
+      		</div>
+      		<div class="back ">
+      			<i class="far fa-paper-plane"></i>
+      		</div>
+      	</div>
+      </div>
+      <div class="flip-container" >
+      	<div class="flipper">
+          <div class="front">
+
+      		</div>
+      		<div class="back ">
+      			<i class="fa fa-cube"></i>
+      		</div>
+      	</div>
+      </div>
+    </div>
+  <!-- firstDisplayModal -->
+    <div class="playmodal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Welcome</h2>
+      </div>
+      <div class="modal-body">
+        <p>Play to become a master at memory game!</p>
+      </div>
+      <div class="playmodal-footer">
+        <h3>Click here play!</h3>
+      </div>
+    </div>
+    </div>
+
+    <!-- The winningModal -->
+    <div class="endmodal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Hurray!</h2>
+        </div>
+        <div class="modal-body">
+          <section class="score-panel-modal">
+            <ul class="stars">
+              <li><i class="modal-star far fa fa-star"></i></li>
+              <li><i class="modal-star far fa fa-star"></i></li>
+              <li><i class="modal-star far fa fa-star"></i></li>
+            </ul>
+            <p>You finished the memory game within<span class="moves">0</span> Moves!</p>
+          </section>
+        </div>
+        <div class="endmodal-footer">
+          <h3>Click here to replay!</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

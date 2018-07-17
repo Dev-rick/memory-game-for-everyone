@@ -1,0 +1,98 @@
+
+@media screen and (min-width: 440px){
+  h1 {
+    font-size: 40px;
+  }
+  .score-panel {
+      margin-bottom: 10px;
+      font-size: 30px;
+  }
+  .deck {
+      width: 400px;
+      min-height: 400px ;
+      padding: 13px;
+  }
+  .flip-container, .front, .back {
+      min-height: calc(330px/4);
+      width: calc(330px/4);
+  }
+  .open {
+      font-size: 50px;
+  }
+  .match {
+      font-size: 50px;
+  }
+
+  .noMatch {
+      font-size: 50px;
+  }
+  .modal-content {
+      font-size: 20px;
+  }
+  #playButton{
+      font-size: 40px;
+  }
+}
+
+@media screen and (min-width: 640px){
+  h1 {
+    font-size: 50px;
+  }
+  .score-panel {
+      margin-bottom: 10px;
+      font-size: 40px;
+  }
+  .deck {
+      width: 600px;
+      min-height: 600px ;
+      padding: 17px;
+  }
+  .flip-container, .front, .back {
+      min-height: calc(500px/4);
+      width: calc(500px/4);
+  }
+  .open {
+      font-size: 70px;
+  }
+  .match {
+      font-size: 70px;
+  }
+
+  .noMatch {
+      font-size: 70px;
+  }
+  .modal-content {
+      font-size: 30px;
+  }
+}
+
+@media screen and (min-width: 800px){
+  h1 {
+    font-size: 55px;
+  }
+  .score-panel {
+      margin-bottom: 5px;
+      font-size: 45px;
+  }
+  .deck {
+      width: 700px;
+      min-height: 700px ;
+      padding: 20px;
+  }
+  .flip-container, .front, .back {
+      min-height: calc(600px/4);
+      width: calc(600px/4);
+  }
+  .open {
+      font-size: 90px;
+  }
+  .match {
+      font-size: 90px;
+  }
+  .noMatch {
+      font-size: 90px;
+  }
+  .modal-content {
+      font-size: 40px;
+  }
+}
